@@ -1,0 +1,44 @@
+.dashboard-top{
+    width: 100%;
+    background: url('../../assets/Wave-20s-2288px.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dashboard-top-title{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-top-title-h2{
+    margin: 0;
+    padding: 0;
+    color: #e6e6e6;
+}
+
+.dashboard-top-title-h1{
+    margin: 0;
+    padding: 0;
+    color: #f5f5f5;
+    font-size: 50px;
+}
+
+.dashboard-top-title-img{
+    width: 700px;
+}
+
+.dashboard-top-title-children{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 420px;
+}
