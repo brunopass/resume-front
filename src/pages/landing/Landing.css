@@ -8,10 +8,13 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    background-color: #f5f5f5;
 }
 
 .dashboard-top-title{
     margin-top: 200px;
+    width: 100%;
+    max-width: 1400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,4 +44,96 @@
     justify-content: space-between;
     align-items: center;
     width: 420px;
+}
+
+.landing-mid-wrapper{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.landing-mid-container{
+    width: 100%;
+    max-width: 1400px;
+}
+
+.landing-mid-container-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.landing-mid-container-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-mid-container-h2{
+    font-size: 50px;
+    color: #2F2F2F;
+    margin: 0;
+    padding: 0;
+}
+
+.landing-mid-container-h4{
+    color: #474747;
+    font-size: 25px;
+    margin: 0 0 50px 0;
+    padding: 0;
+}
+
+.landing-mid-container-card-main{
+    padding: 0 0 100px 0;
+}
+
+.landing-mind-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color:#3623c313;
+}
+
+.landing-mind-container{
+    width: 100%;
+    max-width: 1400px;
+}
+
+.landing-mid-container-mind{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-mid-container-mind-img{
+    width: 500px;
+}
+
+.landing-mid-container-mind-text-h2{
+    font-size: 50px;
+    color: #2F2F2F;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+.landing-mid-container-mind-text-h4{
+    color: #474747;
+    font-size: 25px;
+    margin: 0 0 10px 0;
+    padding: 0;
+    width: 350px;
+}
+
+.landing-mid-container-mind-text-p{
+    color: #474747;
+    font-size: 15px;
+    margin: 0 0 35px 0;
+    width: 350px;
+    text-align: start;
+    padding: 0;
 }
