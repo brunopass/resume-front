@@ -41,3 +41,18 @@
 .navbar-children-ul-li:hover{
     text-decoration: underline;
 }
+
+@media screen and (max-width: 1420px){
+    .navbar-container{
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 950px){
+        .navbar-children-ul-li{
+            display: none;
+        }
+    }
+}

@@ -10,8 +10,13 @@ import going from '../../assets/going.svg'
 import fireworks from '../../assets/fireworks.svg'
 import Card from '../../components/card/Card'
 import Mind from '../../assets/mind.png'
+import Design from '../../assets/design.png'
 
 const Landing = () => {
+
+
+    const foot1 = ['Iniciar Sesión', 'Crear Cuenta', 'Restablecer Cuenta']
+    const foot2 = ['Políticas de Privacidad', 'Políticas de Uso']
 
     useEffect(()=>{
         window.scrollTo(0,0)
@@ -69,6 +74,50 @@ const Landing = () => {
                     </div>
                 </div>
             </div>
+
+            <div className="landing-design-wrapper">
+                <div className="landing-mind-container">
+                    <div className="landing-mid-container-mind">
+                        <div className="landing-mid-container-mind-text">
+                            <h2 className="landing-mid-container-mind-text-h2">Personaliza!</h2>
+                            <h4 className="landing-mid-container-mind-text-h4">Amante del diseño?</h4>
+                            <p className="landing-mid-container-mind-text-p">Elige entre multiples templates, colores, estilos y fuentes, crea tu propia personalidad.</p>
+                            <Link to="/crear-cuenta">
+                                <ButtonPrincipal value="Empezar Ahora"/>
+                            </Link>
+                        </div>
+                        <img src={Design} className="landing-mid-container-mind-img"/>
+                    </div>
+                </div>
+            </div>
+
+            <footer className="footer-wrapper">
+                <div className="footer-container">
+                    <img src="" alt="logo" className="footer-container-img"/>
+                    <ul className="footer-container-ul">
+                        {foot1.map((value,key)=>{
+                            return(
+                                <Link to={`/${value.toLowerCase().split(' ').join('-').replace(/ó/,'o').replace(/í/,'i')}`} key={key}>
+                                    <div className="footer-container-ul-item">
+                                        {value}
+                                    </div>
+                                </Link>
+                            )
+                        })}
+                    </ul>
+                    <ul className="footer-container-ul">
+                        {foot2.map((value,key)=>{
+                            return(
+                                <Link to={`/${value.toLowerCase().split(' ').join('-').replace(/ó/,'o').replace(/í/,'i')}`} key={key}>
+                                    <div className="footer-container-ul-item">
+                                        {value}
+                                    </div>
+                                </Link>
+                            )
+                        })}
+                    </ul>
+                </div>
+            </footer>
         </div>
     )
 }

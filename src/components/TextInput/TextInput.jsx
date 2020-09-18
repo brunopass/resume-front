@@ -4,7 +4,7 @@ import Secure from '../../assets/secure.png'
 import { Link } from 'react-router-dom'
 
 const TextInput = props => {
-    const {handleChange, value, placeholder, isPassword} = props
+    const {handleChange, value, placeholder, isPassword, handleValue} = props
 
     if(isPassword){
         return(
@@ -21,7 +21,7 @@ const TextInput = props => {
             <div className="text-input-container">
                 <h4 className="text-input-container-h4">{value}</h4>
                 <div className="text-input-container-children">
-                    <input type="text" placeholder={placeholder} onChange={e => handleChange(e.target.value)} className="text-input-container-children-input"/>
+                    <input type="text"  value={handleValue} placeholder={placeholder} onChange={e => handleChange(e.target.value)} className="text-input-container-children-input"/>
                 </div>
             </div>
         )
