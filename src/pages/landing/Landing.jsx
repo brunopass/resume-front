@@ -11,6 +11,7 @@ import fireworks from '../../assets/fireworks.svg'
 import Card from '../../components/card/Card'
 import Mind from '../../assets/mind.png'
 import Design from '../../assets/design.png'
+import Logo from '../../assets/logo.svg'
 
 const Landing = () => {
 
@@ -54,6 +55,11 @@ const Landing = () => {
                         <div className="landing-mid-container-card-main">
                             <Card img={fireworks} title="Sobresal" description="Haz que tus habilidades y experiencia se diferencien del resto"/>
                         </div>
+
+                        <div className="landing-mid-container-card-main-pwa">
+                            <Card img={fireworks} title="Sobresal" description="Haz que tus habilidades y experiencia se diferencien del resto"/>
+                        </div>
+                        
                         <Card img={going} title="Crece" description="Lleva varios registros de tu perfil laboral"/>
                     </div>
                 </div>
@@ -93,7 +99,7 @@ const Landing = () => {
 
             <footer className="footer-wrapper">
                 <div className="footer-container">
-                    <img src="" alt="logo" className="footer-container-img"/>
+                    <img src={Logo} alt="logo" className="footer-container-img"/>
                     <ul className="footer-container-ul">
                         {foot1.map((value,key)=>{
                             return(
