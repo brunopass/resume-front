@@ -15,7 +15,6 @@ import Logo from '../../assets/logo.svg'
 
 const Landing = () => {
 
-
     const foot1 = ['Iniciar Sesión', 'Crear Cuenta', 'Restablecer Cuenta']
     const foot2 = ['Políticas de Privacidad', 'Políticas de Uso']
 

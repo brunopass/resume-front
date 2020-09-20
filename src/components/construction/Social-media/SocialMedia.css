@@ -1,0 +1,25 @@
+.social-media-container-ul{
+    padding: 0;
+}
+
+.social-media-child-container{
+    width: 196px;
+    height: 33px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 3px;
+    border: 2px solid #c5c5c5;
+    margin: 0 0 10px 0;
+}
+
+.social-media-child-container-rm{
+    padding-right: 20px;
+}
+
+.social-media-child-container-text{
+    margin-left: 10px;
+    width: 150px;
+    border-style: none;
+}

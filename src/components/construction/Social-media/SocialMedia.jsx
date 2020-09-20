@@ -18,6 +18,14 @@ const SocialMedia = () =>{
         arr.splice(key,1)
         setItem(item.filter(item => item))
     }
+
+    const keyPress = e => {
+        if(e.key === 'Enter' && url != ''){
+            add()
+        }
+    }
+
+    window.addEventListener('keypress', keyPress)
     
     return(
         <div className="social-media-container">
@@ -26,11 +34,16 @@ const SocialMedia = () =>{
                 <TextInput value="Url" handleChange={setUrl.bind(this)} handleValue={url}/>
                 <ButtonAdd value="Agregar" handleClick={add}/>
             </div>
-            <ul>
+            <ul className="social-media-container-ul">
                 {item.map((value,key)=>{
                     return(
-                        <div onClick={remove.bind(this, key)}>
-                            {value}
+                        <div className="social-media-child-container">
+                            <input type="text" value={value} disabled={true} className="social-media-child-container-text"/>
+                            <div className="social-media-child-container-rm" onClick={remove.bind(this, key)}>
+                              <div class="modal-container-close-child">
+                                <div class="modal-container-close-child-md"></div>
+                              </div>
+                            </div>
                         </div>
                     )
                 })}

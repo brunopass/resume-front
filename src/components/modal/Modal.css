@@ -83,9 +83,27 @@
     border-radius: 1px;
     transform: rotate(45deg);
     Z-index: 1;
+    cursor: pointer;
+}
+
+.modal-container-close:hover .modal-container-close-child{
+    background-color: #ff2a2a;
+}
+
+.modal-container-close:hover .modal-container-close-child-md{
+    background-color: #ff2a2a;
+}
+
+.modal-container-close-child:hover{
+    background-color: #ff2a2a;
+}
+
+.modal-container-close-child:hover .modal-container-close-child-md{
+    background-color: #ff2a2a;
 }
 
 .modal-container-close-child-md{
+    cursor: pointer;
     height: 25px;
     width: 2px;
     background-color: #202124;
