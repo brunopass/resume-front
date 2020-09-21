@@ -20,8 +20,8 @@ const Modal = props => {
         <div className="modal-wrapper">
             <div className="modal-container">
                 <div className="modal-container-close" onClick={handleView}>
-                  <div class="modal-container-close-child">
-                    <div class="modal-container-close-child-md"></div>
+                  <div className="modal-container-close-child">
+                    <div className="modal-container-close-child-md"></div>
                   </div>
                 </div>
                 <div>

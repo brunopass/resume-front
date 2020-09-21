@@ -8,8 +8,11 @@ const SocialMedia = () =>{
     const [url, setUrl] = useState('')
     const [item,setItem] = useState([])
 
+
+
     const add = () => {
-        setItem([...item, url])
+        let favicon = `https://s2.googleusercontent.com/s2/favicons?domain_url=${url}`
+        setItem([...item, {favicon, url}])
         setUrl('')
     }
 
@@ -29,25 +32,29 @@ const SocialMedia = () =>{
     
     return(
         <div className="social-media-container">
-            <h2 className="social-media-container-h2">Redes sociales</h2>
+            <h2 className="social-media-container-h2">Redes sociales y Enlaces</h2>
             <div className="social-media-container-text">
                 <TextInput value="Url" handleChange={setUrl.bind(this)} handleValue={url}/>
-                <ButtonAdd value="Agregar" handleClick={add}/>
+                <ButtonAdd value="Agregar" handleClick={ url != '' ? add : alert.bind(this,"La url de tu red social no puede estar vacia")}/>
             </div>
             <ul className="social-media-container-ul">
                 {item.map((value,key)=>{
                     return(
-                        <div className="social-media-child-container">
-                            <input type="text" value={value} disabled={true} className="social-media-child-container-text"/>
-                            <div className="social-media-child-container-rm" onClick={remove.bind(this, key)}>
-                              <div class="modal-container-close-child">
-                                <div class="modal-container-close-child-md"></div>
-                              </div>
+                        <div>
+                            <img src={value.favicon}/>
+                            <div className="social-media-child-container">
+                                <input type="text" value={value.url} disabled={true} className="social-media-child-container-text"/>
+                                <div className="social-media-child-container-rm" onClick={remove.bind(this, key)}>
+                                  <div className="modal-container-close-child">
+                                    <div className="modal-container-close-child-md"></div>
+                                  </div>
+                                </div>
                             </div>
                         </div>
                     )
                 })}
             </ul>
+            <div className="personal-information-container-line"></div>
         </div>
     )
 }
