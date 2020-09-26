@@ -11,8 +11,11 @@
     "kute.js": "^2.0.15",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+<<<<<<< HEAD
     "react-helmet": "^6.1.0",
     "react-responsive-carousel": "^3.2.10",
+=======
+>>>>>>> 225331b664a72fc99cf275dc68bec6dc8b6e6c19
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
   },

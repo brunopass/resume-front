@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .personal-information-container{
     display: flex;
     flex-direction: column;
@@ -10,11 +11,16 @@
     color: #202124;;
 }
 
+=======
+>>>>>>> 225331b664a72fc99cf275dc68bec6dc8b6e6c19
 .personal-information-container-child{
     display: flex;
     width: 400px;
     justify-content: space-between;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 225331b664a72fc99cf275dc68bec6dc8b6e6c19
 }
 
 .personal-information-container-child-img{

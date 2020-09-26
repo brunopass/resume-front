@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 import React, { Fragment, useState } from 'react'
+=======
+import React, { useState } from 'react'
+>>>>>>> 225331b664a72fc99cf275dc68bec6dc8b6e6c19
 import Escaleras from '../../assets/escaleras.svg'
 import Meta from '../../assets/meta.svg'
 import './Dashboard.css'
 import Modal from '../../components/modal/Modal'
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet'
 import Tracking from '../../components/tracking/Tracking'
 import LoggedNavbar from '../../components/logged-navbar/LoggedNavbar'
+=======
+>>>>>>> 225331b664a72fc99cf275dc68bec6dc8b6e6c19
 
 const CVs = () => {
 
@@ -16,6 +23,7 @@ const CVs = () => {
     }
 
     return(
+<<<<<<< HEAD
         <div>
             <Helmet>
                 <title>Resume | Dashboard</title>
@@ -33,6 +41,20 @@ const CVs = () => {
 
                 </Modal>
             </div>
+=======
+        <div className="cv-holder">
+            <ul className="cv-holder-list">
+                <div className="cv-holder-list-add" onClick={handleModal}>
+                    <div className="cv-holder-list-circle">
+                        +
+                    </div>
+                    <h3 className="cv-holder-list-add-h3">Crear nuevo CV</h3>
+                </div>
+            </ul>
+            <Modal open={modal} handleView={handleModal}>
+
+            </Modal>
+>>>>>>> 225331b664a72fc99cf275dc68bec6dc8b6e6c19
         </div>
     )
 }
@@ -40,22 +62,31 @@ const CVs = () => {
 
 const Dashboard = () => {
     const [name,setName] = useState('Usuario')
+<<<<<<< HEAD
     let trackers = [{id: 'experiencia', title: 'Experiencia Laboral', value: 0},{id: 'habilidades', title: 'Habilidades', value: 0},{id: 'educacion', title: 'Educacion', value: 0},{id: 'proyectos', title: 'Proyectos', value: 0},{id: 'redes', title: 'Redes Sociales', value: 0}]
     return(
         <div className="dashboard-body">
             <LoggedNavbar/>
+=======
+
+    return(
+        <div className="dashboard-body">
+>>>>>>> 225331b664a72fc99cf275dc68bec6dc8b6e6c19
             <div className="dashboard-wrapper">
                 <div className="dashboard-wrapper-top-text">
                     <h2 className="dashboard-wrapper-top-text-h2">Hola {name},</h2>
                     <h4 className="dashboard-wrapper-top-text-h4">Nos encanta verte de nuevo!</h4>
                 </div>
 
+<<<<<<< HEAD
                 <ul className="dashboard-wrapper-top-ul">
                     {trackers.map((value,key)=>{
                         return <Tracking id={value.id} value={value.value} title={value.title} key={key}/>
                     })}
                 </ul>
 
+=======
+>>>>>>> 225331b664a72fc99cf275dc68bec6dc8b6e6c19
                 <div className="dashboard-wrapper-top-cards">
                     <div className="dashboard-wrapper-top-card-left">
                         <img src={Escaleras} alt="escaleras"/>

@@ -12,7 +12,10 @@ import Card from '../../components/card/Card'
 import Mind from '../../assets/mind.png'
 import Design from '../../assets/design.png'
 import Logo from '../../assets/logo.svg'
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet'
+=======
+>>>>>>> 225331b664a72fc99cf275dc68bec6dc8b6e6c19
 
 const Landing = () => {
 
@@ -25,9 +28,12 @@ const Landing = () => {
 
     return(
         <div>
+<<<<<<< HEAD
             <Helmet>
                 <title>Resume</title>
             </Helmet>
+=======
+>>>>>>> 225331b664a72fc99cf275dc68bec6dc8b6e6c19
             <Navbar/>
             <div className="dashboard-top">
                 <div className="dashboard-top-title">

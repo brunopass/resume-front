@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 225331b664a72fc99cf275dc68bec6dc8b6e6c19
 .dashboard-body{
     width: 100%;
     background-color: #f5f5f5;
@@ -23,7 +28,11 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+<<<<<<< HEAD
     margin-top: 120px;
+=======
+    margin-top: 50px;
+>>>>>>> 225331b664a72fc99cf275dc68bec6dc8b6e6c19
 }
 
 .dashboard-wrapper-top-text-h2{
@@ -39,6 +48,7 @@
     color: #484A4D;
 }
 
+<<<<<<< HEAD
 .dashboard-wrapper-top-ul{
     padding: 0;
     display: flex;
@@ -47,6 +57,8 @@
     max-width: 1400px;
 }
 
+=======
+>>>>>>> 225331b664a72fc99cf275dc68bec6dc8b6e6c19
 .dashboard-wrapper-top-cards{
     width: 100%;
     max-width: 1400px;
