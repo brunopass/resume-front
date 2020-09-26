@@ -1,13 +1,7 @@
 import React from 'react'
-import Education from '../../components/construction/Education/Education'
-import PersonalInformation from '../../components/construction/Personal-information/PersonalInformation'
-import Projects from '../../components/construction/Projects/Projects'
-import SocialMedia from '../../components/construction/Social-media/SocialMedia'
 import './Curriculum.css'
 
 const Curriculum = () => {
-
-    
 
     return(
         <div className="curriculum-container">
@@ -33,7 +27,6 @@ const Curriculum = () => {
 
                             </ul>
                         </div>
-
                     </div>
                 </div>
             </div>
