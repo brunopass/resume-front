@@ -71,3 +71,8 @@
     align-items: center;
     cursor: pointer;
 }
+
+.work-experience-container-list-empty-child-button:hover{
+
+    background-color: #dddddd;
+}

@@ -31,7 +31,7 @@ const Media = () => {
                         })}   
                     </div>}
                     {media.length === 0 && <div>
-                        <AlertCard description="" img={SocialMedia}/>
+                        <AlertCard description="Todavia no agregaste tus redes sociales? Hazlo ahora mismo!" img={SocialMedia}/>
                     </div>}
                 </CardLister>
             </div>

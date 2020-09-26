@@ -12,7 +12,6 @@ const PersonalInformation = () => {
                 </div>
                 <div className="personal-information-container-child-text">
                     <TextInput value="Nombre y apellido" isPassword={false}/>
-                    <TextInput value="Puesto" isPassword={false}/>
                     <TextInput value="Correo electrónico" isPassword={false}/>
                     <TextInput value="Tel / Cel" isPassword={false}/>
                 </div>
