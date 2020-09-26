@@ -12,6 +12,7 @@ import ButtonAdd from '../../../components/Buttons/ButtonAdd/ButtonAdd'
 
 const CardExperience = props => {
     const {id, title, description,enterprise,init,end,key} = props
+    
 
     return(
         <div key={key}>
@@ -22,6 +23,11 @@ const CardExperience = props => {
 
 const Experience = () => {
     const [xp,setXp] = useState([])
+    const [portal, setPortal] = useState(false)
+
+    const handlePortal = () => {
+        setPortal(!portal)
+    }
 
     const handleChange = value => {
         alert(value)
@@ -53,10 +59,10 @@ const Experience = () => {
                     }
                     {
                         xp.length === 0 &&
-                        <AlertCard description="Todavia no agregaste tu experiencia laboral? Hazlo ahora mismo!" img={Working}/>
+                        <AlertCard description="Todavia no agregaste tu experiencia laboral? Hazlo ahora mismo!" img={Working} handleClick={handlePortal}/>
                     }
                 </CardLister>
-                <UserPortal>
+                <UserPortal open={portal} handleView={handlePortal}>
                     <div className="">
                         <h2>Agregar Experiencia Laboral</h2>
                         <div>

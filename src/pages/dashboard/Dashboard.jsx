@@ -29,9 +29,7 @@ const CVs = () => {
                         <h3 className="cv-holder-list-add-h3">Crear nuevo CV</h3>
                     </div>
                 </ul>
-                <Modal open={modal} handleView={handleModal}>
-
-                </Modal>
+                <Modal open={modal} handleView={handleModal}/>
             </div>
         </div>
     )
