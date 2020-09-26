@@ -1,0 +1,73 @@
+.work-experience-container-top{
+    width: 500px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.work-experience-container-top-left-h2{
+    color: #202124;
+}
+
+.work-experience-container-top-right-add{
+    width: 44px;
+    height: 44px;
+    border-radius: 44px;
+    background: linear-gradient(45deg, #FF5631, #FF416D);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    color: #f5f5f5;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-box-shadow: 0px 6px 40px 0px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0px 6px 40px 0px rgba(0,0,0,0.05);
+    box-shadow: 0px 6px 40px 0px rgba(0,0,0,0.05);
+}
+
+.work-experience-container-list{
+    margin: 50px 0 0 0;
+    width: 500px;
+    height: max-content;
+    padding: 0;
+}
+
+.work-experience-container-list-empty{
+    width: 500px;
+    height: 150px;
+    border: 2px dashed #484A4D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.work-experience-container-list-empty-img{
+    height: 150px;
+}
+
+.work-experience-container-list-empty-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.work-experience-container-list-empty-child-h3{
+    color: #484A4D;
+    margin: 0 0 10px 0;
+}
+
+.work-experience-container-list-empty-child-button{
+    width: 100px;
+    height: 34px;
+    border-radius: 3px;
+    background-color: #f5f5f5;
+    border: 2px solid #484A4D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

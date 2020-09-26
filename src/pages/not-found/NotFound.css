@@ -1,0 +1,57 @@
+.not-found-wrapper{
+    width: 100%;
+    height: 100vh;
+    background: url('../../assets/Wave-20s-2288px.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.not-found-wrapper-img{
+    height: 650px;
+    }
+
+.not-found-wrapper-space{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: slide 30s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate ;
+	        animation: slide 30s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate ;
+}
+
+.not-found-wrapper-space-h2{
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  max-width: 300px;
+}
+
+.not-found-wrapper-space-h4{
+  margin: 10px 0 30px 0;
+  padding: 0;
+  color: #f5f5f5;
+}
+
+@-webkit-keyframes slide {
+    0% {
+      -webkit-transform: translateY(0) rotate(-25deg);
+              transform: translateY(0) rotate(25deg);
+    }
+    100% {
+      -webkit-transform: translateY(-50px) rotate(-25deg);
+              transform: translateY(-50px) rotate(25deg);
+    }
+  }
+  @keyframes slide {
+    0% {
+      -webkit-transform: translateY(0) rotate(-25deg);
+              transform: translateY(0) rotate(-25deg);
+    }
+    100% {
+      -webkit-transform: translateY(-50px) rotate(25deg);
+              transform: translateY(-50px) rotate(25deg);
+
+    }
+  }

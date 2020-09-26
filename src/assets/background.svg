@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="865" viewBox="0 0 1920 865">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Web_1920_2);
+      }
+
+      .cls-2 {
+        fill: #3532ca;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-4 {
+        fill: #352bc7;
+      }
+
+      .cls-5 {
+        fill: rgba(245,245,245,0);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#3523c3"/>
+      <stop offset="1" stop-color="#3658dd"/>
+    </linearGradient>
+    <clipPath id="clip-Web_1920_2">
+      <rect width="1920" height="865"/>
+    </clipPath>
+  </defs>
+  <g id="Web_1920_2" data-name="Web 1920 – 2" class="cls-1">
+    <rect class="cls-5" width="1920" height="865"/>
+    <rect id="Rectangle_54" data-name="Rectangle 54" class="cls-2" width="1920" height="70"/>
+    <path id="Path_2" data-name="Path 2" class="cls-3" d="M398,0s-118.557,396.9,0,539.653,229.5,134.913,474.23,31.375,319.677-30.55,419.644,43.051,139.514,114.247,347.136,46.138,347.137,214.214,587.716,194.441,226.3-163.681,226.3-163.681L2382.1-79.645,398-14.481,270.309,412.7Z" transform="translate(-398)"/>
+    <rect id="Rectangle_55" data-name="Rectangle 55" class="cls-4" width="1542" height="70" transform="translate(378)"/>
+  </g>
+</svg>
