@@ -1,0 +1,10 @@
+.project-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.project-container{
+    margin-top: 120px;
+}

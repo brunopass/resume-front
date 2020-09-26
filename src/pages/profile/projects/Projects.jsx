@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet'
 import AlertCard from '../../../components/AlertCard/AlertCard'
 import CardLister from '../../../components/CardLister/CardLister'
 import LoggedNavbar from '../../../components/logged-navbar/LoggedNavbar'
+import Pr from '../../../assets/Project.svg'
+import './Projects.css'
 
 const ProjectCard = props => {
     const {id,key} = props
@@ -17,12 +19,12 @@ const ProjectCard = props => {
 const Projects = () => {
     const [project,setProject] = useState([])
     return(
-        <div>
+        <div className="project-wrapper">
             <Helmet>
                 <title>Resume | Editar Proyectos</title>
             </Helmet>
             <LoggedNavbar/>
-            <div>
+            <div className="project-container">
                 <CardLister title="Proyectos">
                     {project.length > 0 && <div>
                         {project.map((value,key)=>{
@@ -30,7 +32,7 @@ const Projects = () => {
                         })}    
                     </div>}
                     {project.length === 0 && <div>
-                        <AlertCard description="" img=""/>    
+                        <AlertCard description="Todavia no agregaste tu último proyecto? Hazlo ahora mismo!" img={Pr}/>    
                     </div>}
                 </CardLister>
             </div>

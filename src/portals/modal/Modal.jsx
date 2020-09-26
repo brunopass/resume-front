@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import { Helmet } from 'react-helmet'
-import ButtonPrincipal from '../Buttons/ButtonPrincipal/ButtonPrincipal'
-import TextInput from '../TextInput/TextInput'
+import ButtonPrincipal from '../../components/Buttons/ButtonPrincipal/ButtonPrincipal'
+import TextInput from '../../components/TextInput/TextInput'
 import './Modal.css'
 
 const Modal = props => {
