@@ -10,10 +10,7 @@
     align-items: center;
     animation: open-card 300ms forwards;
     opacity: 0;
-<<<<<<< HEAD
     z-index: 1;
-=======
->>>>>>> 225331b664a72fc99cf275dc68bec6dc8b6e6c19
 }
 
 .modal-container{

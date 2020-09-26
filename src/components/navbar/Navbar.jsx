@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { useCallback, useEffect, useState } from 'react'
-=======
-import React, { useCallback, useState } from 'react'
->>>>>>> 225331b664a72fc99cf275dc68bec6dc8b6e6c19
 import { Link } from 'react-router-dom'
 import ButtonPrincipal from '../Buttons/ButtonPrincipal/ButtonPrincipal'
 import ButtonSecondary from '../Buttons/ButtonSecondary/ButtonSecondary'
@@ -12,12 +8,8 @@ import './Navbar.css'
 const Navbar = () => {
 
     const linkers = ['Características','Quienes Somos', 'Iniciar sesión']
-<<<<<<< HEAD
     const[style,setStyle] = useState(true)
     
-=======
-    const[style,setStyle] = useState(false)
->>>>>>> 225331b664a72fc99cf275dc68bec6dc8b6e6c19
     
     const changeStyle = () => {
         if(window.scrollY >= 80){
@@ -28,10 +20,7 @@ const Navbar = () => {
     }
 
     window.addEventListener('scroll', changeStyle)
-<<<<<<< HEAD
     
-=======
->>>>>>> 225331b664a72fc99cf275dc68bec6dc8b6e6c19
 
     return(
         <nav className={style ? "navbar-wrap-off" : "navbar-wrap"}> 
