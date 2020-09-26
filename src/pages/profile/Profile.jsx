@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
-import PersonalInformation from '../../components/construction/Personal-information/PersonalInformation'
+import PersonalInformation from '../../components/construction/Personal-information/PerrsonalInformation'
 import LoggedNavbar from '../../components/logged-navbar/LoggedNavbar'
 import './Profile.css'
 
