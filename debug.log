@@ -1,3 +1,0 @@
-[0925/193621.288:ERROR:process_info.cc(329)] VirtualQueryEx: Acceso denegado. (0x5)
-[0925/193621.291:ERROR:process_info.cc(556)] ReadMemoryInfo failed
-[0925/193621.291:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Se intentó obtener acceso a un proceso que está cerrándose. (0xc000010a)
