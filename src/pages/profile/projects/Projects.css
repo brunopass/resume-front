@@ -8,3 +8,19 @@
 .project-container{
     margin-top: 120px;
 }
+
+.project-user-portal-card{
+    width: 500px;
+}
+
+.project-user-portal-card-text-area{
+    width: 412px;
+    margin: 5px 0 30px 0;
+    height: 100px;
+    border: 2px solid #3523C3;
+    border-radius: 3px;
+}
+
+.project-user-portal-card-button{
+    margin: 0 0 35px 0;
+}
