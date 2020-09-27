@@ -10,8 +10,9 @@ import TextInput from '../../../components/TextInput/TextInput'
 import ComboInput from '../../../components/ComboInput/ComboInput'
 import ButtonAdd from '../../../components/Buttons/ButtonAdd/ButtonAdd'
 
+
 const CardExperience = props => {
-    const {id, title, description,enterprise,init,end,key} = props
+    const {id, job,enterprise,init,end,key} = props
 
     return(
         <div key={key}>
@@ -19,6 +20,7 @@ const CardExperience = props => {
         </div>
     )
 }
+
 
 const Experience = () => {
     const [xp,setXp] = useState([])
@@ -31,12 +33,11 @@ const Experience = () => {
     }
 
     const handleChange = value => {
-        alert(value)
+        
     }
 
     const actualJob = () => {
         setActual(!actual)
-        
     }
 
     const getYearList = () => {
@@ -46,6 +47,28 @@ const Experience = () => {
             years.push(thisYear-i)
         }
         return years
+    }
+
+    const comboPropsMonth = {
+        value:"Mes",
+        options:['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+    }
+
+    const comboPropsYear = {
+        value:"Año",
+        options:getYearList()
+    }
+
+    const userPortal = {
+        open: portal,
+        handleView:handlePortal,
+        title:"Resume | Agregar Experiencia Laboral"
+    }
+
+    const alertCard = {
+        description:"Todavia no agregaste tu experiencia laboral? Hazlo ahora mismo!",
+        img:Working,
+        handleClick:handlePortal
     }
 
     return (
@@ -59,42 +82,50 @@ const Experience = () => {
                     {xp.length > 0 && 
                     <div>    
                         {xp.map((value,key)=>{
-                            return <CardExperience key={key}/>
+                            let props = {
+                                key: key,
+                                id: value.id,
+                                job: value.title,
+                                enterprise: value.enterprise,
+                                init: value.init,
+                                end: value.end                                
+                            }
+                            return <CardExperience {...props}/>
                         })}
                     </div>
                     }
                     {
                         xp.length === 0 &&
-                        <AlertCard description="Todavia no agregaste tu experiencia laboral? Hazlo ahora mismo!" img={Working} handleClick={handlePortal}/>
+                        <AlertCard {...alertCard}/>
                     }
                 </CardLister>
-                <UserPortal open={portal} handleView={handlePortal} title="Resume | Agregar Experiencia Laboral">
+                <UserPortal {...userPortal}>
                     <div className="experience-portal-child">
                         <h2 className="experience-portal-child-h2">Agregar Experiencia Laboral</h2>
                         <div className="experience-portal-child-text">
                             <div className="experience-portal-child-text-top">
-                                <TextInput value="Puesto Laboral"/>
-                                <TextInput value="Empresa"/>
+                                <TextInput value="Puesto Laboral *" placeholder="ej: Analista funcional"/>
+                                <TextInput value="Empresa *"/>
                             </div>
                             <div className="experience-portal-child-text-mid">
                                 <div className="experience-portal-child-text-mid-group">
                                     <span className="experience-portal-child-text-mid-group-span">Fecha de Inicio</span>
                                     <div className="experience-portal-child-text-mid-group-combo">
-                                    <ComboInput value="Mes" options={['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']} handleChange={handleChange.bind(this)}/>
-                                    <ComboInput value="Año" options={getYearList()} handleChange={handleChange.bind(this)}/>
+                                    <ComboInput {...comboPropsMonth} handleChange={handleChange.bind(this)}/>
+                                    <ComboInput {...comboPropsYear} handleChange={handleChange.bind(this)}/>
                                     </div>
                                 </div>
                                 <div className={actual ? "experience-portal-child-text-mid-group" : "experience-portal-child-text-mid-group-del" }>
-                                    <span className="experience-portal-child-text-mid-group-span">Fecha de Finalizacion</span>
+                                    <span className="experience-portal-child-text-mid-group-span">Fecha de Finalización</span>
                                     <div className="experience-portal-child-text-mid-group-combo">
-                                        <ComboInput value="Mes" options={['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']} handleChange={handleChange.bind(this)}/>
-                                        <ComboInput value="Año" options={getYearList()} handleChange={handleChange.bind(this)}/>
+                                        <ComboInput {...comboPropsMonth} handleChange={handleChange.bind(this)}/>
+                                        <ComboInput {...comboPropsYear} handleChange={handleChange.bind(this)}/>
                                     </div>
                                 </div>
                             </div>
                             <div className="experience-portal-checkbox">
                                 <input type="checkbox" onChange={actualJob}/>
-                                <p>Trabajo actualmente aqui</p>
+                                <p>Trabajo actualmente aquí</p>
                             </div>
                         </div>
                     </div>

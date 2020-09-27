@@ -8,3 +8,12 @@
 .skills-container{
     margin-top: 120px;
 }
+
+.skills-user-portal-card{
+    width: 500px;
+    height: 210px;
+}
+
+.skills-user-portal-card-h2{
+    color: #202124;
+}

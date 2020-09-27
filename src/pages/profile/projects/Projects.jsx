@@ -5,6 +5,8 @@ import CardLister from '../../../components/CardLister/CardLister'
 import LoggedNavbar from '../../../components/logged-navbar/LoggedNavbar'
 import Pr from '../../../assets/Project.svg'
 import './Projects.css'
+import UserPortal from '../../../portals/user/UserPortal'
+import TextInput from '../../../components/TextInput/TextInput'
 
 const ProjectCard = props => {
     const {id,key} = props
@@ -18,6 +20,26 @@ const ProjectCard = props => {
 
 const Projects = () => {
     const [project,setProject] = useState([])
+    const [portal, setPortal] = useState(false)
+
+    const handlePortal = () => {
+
+        setPortal(!portal)
+    }
+
+    const userPortal = {
+        open: portal,
+        handleView:handlePortal,
+        title:'Resume | Agregar Proyecto'
+    }
+
+    const alertCard = {
+        description:"Todavia no agregaste tu último proyecto? Hazlo ahora mismo!",
+        img:Pr,
+        handleClick:handlePortal
+    }
+
+
     return(
         <div className="project-wrapper">
             <Helmet>
@@ -25,16 +47,25 @@ const Projects = () => {
             </Helmet>
             <LoggedNavbar/>
             <div className="project-container">
-                <CardLister title="Proyectos">
+                <CardLister title="Proyectos" handleClick={handlePortal}>
                     {project.length > 0 && <div>
                         {project.map((value,key)=>{
                             return <ProjectCard key={key}/>
                         })}    
                     </div>}
                     {project.length === 0 && <div>
-                        <AlertCard description="Todavia no agregaste tu último proyecto? Hazlo ahora mismo!" img={Pr}/>    
+                        <AlertCard {...alertCard}/>    
                     </div>}
                 </CardLister>
+                <UserPortal {...userPortal}>
+                    <div>
+                        <h2>Agregar Proyecto</h2>
+                        <div>
+                            <TextInput value="Nombre del proyecto *"/>
+                            <TextInput value="Url"/>
+                        </div>
+                    </div>
+                </UserPortal>
             </div>
         </div>
     )
