@@ -28,8 +28,8 @@ const Portal = props => {
 }
 
 const UserPortal = props => {
-    const {children,open,handleView} = props
-    return ReactDOM.createPortal( <Portal open={open} handleView={handleView}>{children}</Portal>,document.getElementById("card"))
+    const {children,open,handleView,title} = props
+    return ReactDOM.createPortal( <Portal title={title} open={open} handleView={handleView}>{children}</Portal>,document.getElementById("card"))
 }
 
 export default UserPortal

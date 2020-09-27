@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './CardLister.css'
 
 const CardLister = props => {
-    const {children, title,img } = props
+    const {children, title,img,handleClick } = props
     useEffect(()=>{
         
     }, [])
@@ -11,7 +11,7 @@ const CardLister = props => {
         <div className="work-experience-wrapper">
             <div className="work-experience-container-top">
                 <h2 className="work-experience-container-top-left-h2">{title}</h2>
-                <div className="work-experience-container-top-right-add">
+                <div className="work-experience-container-top-right-add" onClick={handleClick}>
                     +
                 </div>
             </div>

@@ -12,7 +12,6 @@ import ButtonAdd from '../../../components/Buttons/ButtonAdd/ButtonAdd'
 
 const CardExperience = props => {
     const {id, title, description,enterprise,init,end,key} = props
-    
 
     return(
         <div key={key}>
@@ -24,6 +23,7 @@ const CardExperience = props => {
 const Experience = () => {
     const [xp,setXp] = useState([])
     const [portal, setPortal] = useState(false)
+    const [actual,setActual] = useState(true)
 
     const handlePortal = () => {
         setPortal(!portal)
@@ -31,6 +31,11 @@ const Experience = () => {
 
     const handleChange = value => {
         alert(value)
+    }
+
+    const actualJob = () => {
+        setActual(!actual)
+        
     }
 
     const getYearList = () => {
@@ -49,7 +54,7 @@ const Experience = () => {
             </Helmet>
             <LoggedNavbar/>
             <div className="experience-container">
-                <CardLister title="Experiencia Laboral">
+                <CardLister title="Experiencia Laboral" handleClick={handlePortal}>
                     {xp.length > 0 && 
                     <div>    
                         {xp.map((value,key)=>{
@@ -62,32 +67,39 @@ const Experience = () => {
                         <AlertCard description="Todavia no agregaste tu experiencia laboral? Hazlo ahora mismo!" img={Working} handleClick={handlePortal}/>
                     }
                 </CardLister>
-                <UserPortal open={portal} handleView={handlePortal}>
-                    <div className="">
-                        <h2>Agregar Experiencia Laboral</h2>
-                        <div>
-                            <TextInput value="Puesto"/>
-                            <TextInput value="Empresa"/>
-                            <div className="">
-                                <div>
-                                    <span>Fecha de Inicio</span>
-                                    <div>
+                <UserPortal open={portal} handleView={handlePortal} title="Resume | Agregar Experiencia Laboral">
+                    <div className="experience-portal-child">
+                        <h2 className="experience-portal-child-h2">Agregar Experiencia Laboral</h2>
+                        <div className="experience-portal-child-text">
+                            <div className="experience-portal-child-text-top">
+                                <TextInput value="Puesto"/>
+                                <TextInput value="Empresa"/>
+                            </div>
+                            <div className="experience-portal-child-text-mid">
+                                <div className="experience-portal-child-text-mid-group">
+                                    <span className="experience-portal-child-text-mid-group-span">Fecha de Inicio</span>
+                                    <div className="experience-portal-child-text-mid-group-combo">
                                     <ComboInput value="Mes" options={['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']} handleChange={handleChange.bind(this)}/>
                                     <ComboInput value="Año" options={getYearList()} handleChange={handleChange.bind(this)}/>
                                     </div>
                                 </div>
-                                <div>
-                                    <span>Fecha de Inicio</span>
-                                    <div>
-                                    <ComboInput value="Mes" options={['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']} handleChange={handleChange.bind(this)}/>
-                                    <ComboInput value="Año" options={getYearList()} handleChange={handleChange.bind(this)}/>
+                                <div className={actual ? "experience-portal-child-text-mid-group" : "experience-portal-child-text-mid-group-del" }>
+                                    <span className="experience-portal-child-text-mid-group-span">Fecha de Finalizacion</span>
+                                    <div className="experience-portal-child-text-mid-group-combo">
+                                        <ComboInput value="Mes" options={['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']} handleChange={handleChange.bind(this)}/>
+                                        <ComboInput value="Año" options={getYearList()} handleChange={handleChange.bind(this)}/>
                                     </div>
                                 </div>
                             </div>
-                            <input type="checkbox"/>
+                            <div className="experience-portal-checkbox">
+                                <input type="checkbox" onChange={actualJob}/>
+                                <p>Trabajo actualmente aqui</p>
+                            </div>
                         </div>
                     </div>
-                    <ButtonAdd value="Agregar"/>
+                    <div className="experience-portal-button-add">
+                        <ButtonAdd value="Agregar"/>
+                    </div>
                 </UserPortal>
             </div>
         </div>
