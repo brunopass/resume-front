@@ -72,7 +72,7 @@ const Experience = () => {
                         <h2 className="experience-portal-child-h2">Agregar Experiencia Laboral</h2>
                         <div className="experience-portal-child-text">
                             <div className="experience-portal-child-text-top">
-                                <TextInput value="Puesto"/>
+                                <TextInput value="Puesto Laboral"/>
                                 <TextInput value="Empresa"/>
                             </div>
                             <div className="experience-portal-child-text-mid">
