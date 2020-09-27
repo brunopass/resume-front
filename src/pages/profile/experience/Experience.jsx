@@ -27,6 +27,7 @@ const Experience = () => {
 
     const handlePortal = () => {
         setPortal(!portal)
+        setActual(!portal)
     }
 
     const handleChange = value => {
