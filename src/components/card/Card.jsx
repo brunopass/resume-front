@@ -1,5 +1,4 @@
 import React from 'react'
-import ButtonSecondary from '../Buttons/ButtonSecondary/ButtonSecondary'
 import './Card.css'
 
 const Card = props => {

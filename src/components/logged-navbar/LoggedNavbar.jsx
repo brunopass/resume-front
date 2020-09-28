@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import ButtonPrincipal from '../Buttons/ButtonPrincipal/ButtonPrincipal'
+import Logo from '../../assets/logo-color.svg'
 import './LoggedNavbar.css'
 
 const LoggedNavbar = () => {
@@ -10,7 +11,9 @@ const LoggedNavbar = () => {
     return (
         <div className="logged-navbar-wrapper">
             <div className="logged-navbar-container">
-                <img alt="logo" src=""className="logged-navbar-container-img"/>
+                <Link to="/dashboard">
+                    <img alt="logo" src={Logo} className="logged-navbar-container-img"/>
+                </Link>
 
                 <div className="logged-navbar-container-right">
 

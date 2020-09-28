@@ -37,8 +37,10 @@ const CVs = () => {
 
 
 const Dashboard = () => {
+    let track = [{id: 'experiencia', title: 'Experiencia Laboral', value: 0},{id: 'habilidades', title: 'Habilidades', value: 0},{id: 'educacion', title: 'Educacion', value: 0},{id: 'proyectos', title: 'Proyectos', value: 0},{id: 'redes', title: 'Redes Sociales', value: 0}]
     const [name,setName] = useState('Usuario')
-    let trackers = [{id: 'experiencia', title: 'Experiencia Laboral', value: 0},{id: 'habilidades', title: 'Habilidades', value: 0},{id: 'educacion', title: 'Educacion', value: 0},{id: 'proyectos', title: 'Proyectos', value: 0},{id: 'redes', title: 'Redes Sociales', value: 0}]
+    const [trackers,setTrackers] = useState(track)
+
     return(
         <div className="dashboard-body">
             <LoggedNavbar/>
@@ -50,7 +52,13 @@ const Dashboard = () => {
 
                 <ul className="dashboard-wrapper-top-ul">
                     {trackers.map((value,key)=>{
-                        return <Tracking id={value.id} value={value.value} title={value.title} key={key}/>
+                        let props = {
+                            id:value.id,
+                            value:value.value,
+                            title:value.title,
+                            key:key
+                        }
+                        return <Tracking {...props}/>
                     })}
                 </ul>
 
@@ -67,7 +75,7 @@ const Dashboard = () => {
                         <img src={Meta} alt="meta"/>
                         <div>
                             <h2 className="dashboard-wrapper-top-card-h2">Sobresal del resto</h2>
-                            <h4 className="dashboard-wrapper-top-card-h4">Demuestra tus skills, proyectos y más!</h4>
+                            <h4 className="dashboard-wrapper-top-card-h4">Demuestra tus skills, proyectos y demás!</h4>
                         </div>
                     </div>
                 </div>
