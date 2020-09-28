@@ -21,7 +21,6 @@ const CardExperience = props => {
     )
 }
 
-
 const Experience = () => {
     const [xp,setXp] = useState([])
     const [portal, setPortal] = useState(false)
