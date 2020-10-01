@@ -12,7 +12,7 @@ const LoggedNavbar = () => {
         <div className="logged-navbar-wrapper">
             <div className="logged-navbar-container">
                 <Link to="/dashboard">
-                    <img alt="logo" src={Logo} className="logged-navbar-container-img"/>
+                    <img alt="logo" src="" className="logged-navbar-container-img"/>
                 </Link>
 
                 <div className="logged-navbar-container-right">
