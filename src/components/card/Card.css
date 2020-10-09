@@ -69,12 +69,18 @@
     
         @media screen and (max-width: 600px) {
             .card-wrapper{
-                width: 90%;
+                width: 100%;
+                background-color: rgb(255, 255, 255);
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none;
             }
         
             .card-wrapper-img{
                 width: 250px;
             }
+
+            
         }
     }
 

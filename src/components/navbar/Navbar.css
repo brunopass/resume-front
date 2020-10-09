@@ -100,5 +100,25 @@
         .navbar-children-ul-li-iniciar{
             font-size: 15px;
         }
+
+        .navbar-button{
+            display: none;
+        }
+
+        .navbar-children{
+            width: max-content;
+        }
+
+        .navbar-wrap{
+            height: 65px;
+        }
+
+        .navbar-wrap-off{
+            height: 65px;
+        }
+
+        .img-logo{
+            height: 40px;
+        }
     }
 }

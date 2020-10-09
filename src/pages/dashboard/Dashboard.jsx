@@ -3,9 +3,9 @@ import Escaleras from '../../assets/escaleras.svg'
 import Meta from '../../assets/meta.svg'
 import './Dashboard.css'
 import Modal from '../../portals/modal/Modal'
-import { Helmet } from 'react-helmet'
 import Tracking from '../../components/tracking/Tracking'
 import LoggedNavbar from '../../components/logged-navbar/LoggedNavbar'
+import { Helmet } from 'react-helmet'
 
 const CVs = () => {
 

@@ -23,6 +23,7 @@
 box-shadow: 10px 0px 34px -9px rgba(0,0,0,0.20);
 border-radius: 0 3px 3px 0;
 animation: appear 300ms forwards;
+
 }
 
 .login-container-left-h3{
@@ -52,6 +53,7 @@ animation: appear 300ms forwards;
     border-radius: 3px;
     background-color: transparent;
     border: 6px solid #ffffff46;
+    z-index: 0;
 }
 
 .box div:nth-child(1){
@@ -68,7 +70,7 @@ animation: appear 300ms forwards;
 
 .box div:nth-child(3){
     top: 17%;
-    left: 6%;
+    left: 90%;
     animation: animate 9s linear infinite;
 }
 
@@ -79,7 +81,7 @@ animation: appear 300ms forwards;
 }
 
 .box div:nth-child(5){
-    top: 67%;
+    top: 57%;
     left: 40%;
     animation: animate 6s linear infinite;
 }
@@ -92,7 +94,7 @@ animation: appear 300ms forwards;
 
 .box div:nth-child(7){
     top: 60%;
-    left: 80%;
+    left: 85%;
     animation: animate 15s linear infinite;
 }
 
@@ -109,8 +111,8 @@ animation: appear 300ms forwards;
 }
 
 .box div:nth-child(10){
-    top: 20%;
-    left: 80%;
+    top: 40%;
+    left: 65%;
     animation: animate 5s linear infinite;
 }
 

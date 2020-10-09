@@ -11,7 +11,7 @@ const Navbar = () => {
     
     
     const changeStyle = () => {
-        if(window.scrollY >= 80){
+        if(window.scrollY >= 70){
             setStyle(false)
         }else{
             setStyle(true)

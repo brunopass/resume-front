@@ -1,8 +1,8 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
-import PersonalInformation from '../../components/construction/Personal-information/PerrsonalInformation'
 import LoggedNavbar from '../../components/logged-navbar/LoggedNavbar'
+import TextInput from '../../components/TextInput/TextInput'
 import './Profile.css'
 
 const Tracker = props => {
@@ -30,7 +30,21 @@ const Profile = () => {
             </Helmet>
             <LoggedNavbar/>
             <div className="profile-container">
-                <PersonalInformation/>
+
+            <div className="personal-information-container">
+                <h2 className="personal-information-container-h2">Información Personal</h2>
+                    <div className="personal-information-container-child">
+                        <div className="personal-information-container-child-img">
+
+                        </div>
+                        <div className="personal-information-container-child-text">
+                            <TextInput value="Nombre y apellido" isPassword={false}/>
+                            <TextInput value="Correo electrónico" isPassword={false}/>
+                            <TextInput value="Tel / Cel" isPassword={false}/>
+                        </div>
+                    </div>
+                <div className="personal-information-container-line"></div>
+            </div>
                 <ul className="profile-container-list">
                     {trackers.map((value,key)=>{
                         return <Tracker id={value.id} value={value.value} title={value.title} key={key}/>
